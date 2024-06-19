@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acciones según Mensaje</title>
+    <title>Washiez unofficial greeting system</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,10 +34,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Acciones según Mensaje</h1>
-        <input type="text" id="mensaje" placeholder="Introduce tu mensaje">
-        <button onclick="mostrarAccion()">Enviar</button>
-        <button onclick="location.href='configuracion.html'">Configuración</button>
+        <h1>Washiez unofficial greeting system by: Alechiga2</h1>
+        <input type="text" id="mensaje" placeholder="Please put greeting name here.">
+        <button onclick="mostrarAccion()">Confirm</button>
+        <button onclick="location.href='configuracion.html'">Configuration</button>
         <div id="resultado"></div>
     </div>
 
@@ -53,7 +53,7 @@
             const acciones = JSON.parse(getCookie('acciones') || '{}');
 
             const resultado = document.getElementById('resultado');
-            resultado.textContent = acciones[mensaje] || "Acción no reconocida. Intenta con otro mensaje.";
+            resultado.textContent = acciones[mensaje] || "There is no greeting with that name, please try again.";
         }
     </script>
 </body>
