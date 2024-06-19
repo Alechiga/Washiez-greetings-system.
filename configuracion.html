@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuración de Acciones</title>
+    <title>Washiez unofficial greeting system</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,10 +37,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Configuración de Acciones</h1>
-        <input type="text" id="mensaje" placeholder="Mensaje">
-        <input type="text" id="accion" placeholder="Acción">
-        <button onclick="agregarAccion()">Agregar</button>
+        <h1>Greetings configuration</h1>
+        <input type="text" id="Name" placeholder="Mensaje">
+        <input type="text" id="Greeting" placeholder="Acción">
+        <button onclick="agregarAccion()">Add</button>
         <div id="acciones-list"></div>
         <button onclick="location.href='index.html'">Volver</button>
     </div>
@@ -64,7 +64,7 @@
             const accion = document.getElementById('accion').value.trim();
 
             if (!mensaje || !accion) {
-                alert('Ambos campos son obligatorios.');
+                alert('Please write something!');
                 return;
             }
 
@@ -94,7 +94,7 @@
                 div.textContent = `${mensaje}: ${accion}`;
                 
                 const botonBorrar = document.createElement('button');
-                botonBorrar.textContent = 'Borrar';
+                botonBorrar.textContent = 'Delete';
                 botonBorrar.onclick = () => borrarAccion(mensaje);
                 
                 div.appendChild(botonBorrar);
